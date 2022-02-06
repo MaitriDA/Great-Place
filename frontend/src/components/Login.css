@@ -17,6 +17,12 @@
     font-size: 18px;
     z-index: 1;
   }
+  .loginContainer span{
+    color: teal;
+  }
+  .loginContainer .logoIcon{
+    color: teal;
+  }
   .loginContainer input{
       font-size: 18px;
       border: none;

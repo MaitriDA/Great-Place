@@ -7,6 +7,7 @@ import axios from 'axios';
 import PinCard from '../src/components/Card.js';
 import Register from './components/Register';
 import Login from './components/Login';
+import Profile from './components/Profile';
 
 function App() {
   const [currentUser,setCurrentUser]=useState(JSON.parse(localStorage.getItem("user")))
@@ -27,12 +28,16 @@ function App() {
 
   const [login,setLogin]=useState(false);
   const [register,setRegister]=useState(false);
+  const [profile,setProfile]=useState(false);
 
   const handleRegister=()=>{
     setRegister(true);
   }
   const handleLogin=()=>{
     setLogin(true);
+  }
+  const handleProfile=()=>{
+    setProfile(true);
   }
   const handleLogout=()=>{
     localStorage.removeItem("user")
@@ -140,13 +145,17 @@ function App() {
 
       )}
       {currentUser?(
-        <button className="button logout" onClick={handleLogout}>LogOut</button>
+        <div className="buttons">
+          <button className="button login" onClick={handleProfile}>Profile</button>
+      <button className="button register" onClick={handleLogout}>Logout</button>
+        </div>
       ):(<div className="buttons">
       <button className="button login" onClick={handleLogin}>Login</button>
       <button className="button register" onClick={handleRegister}>Register</button>
     </div>)}
     {register && (<Register setRegister={setRegister} setCurrentUser={setCurrentUser}/>)}
     {login && (<Login setLogin={setLogin} setCurrentUser={setCurrentUser}/>)}
+    {profile && (<Profile setProfile={setProfile}/>)}
     </ReactMapGL>
   );
 }

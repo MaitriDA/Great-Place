@@ -14,6 +14,17 @@ router.post("/",async(req,res)=>{
     }
 })
 
+//Get all Pins of a particular user
+router.get("/:user",async(req,res)=>{
+    const user=req.params.user;
+    try{
+        const pins=await Pin.find({username:user});
+        res.status(200).json(pins);
+    }catch(err){
+        console.log(err);
+        res.status(500);
+    }
+})
 
 //Get all Pins
 router.get("/",async(req,res)=>{
