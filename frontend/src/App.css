@@ -1,0 +1,107 @@
+.card {
+   position: relative;
+   z-index: 3;
+  }
+.marker{
+    position: relative;
+    z-index: -1;
+}
+label {
+    width: max-content;
+    color: tomato;
+    font-size: 13px;
+    border-bottom: 0.5px solid tomato;
+    margin: 3px 0;
+  }
+  
+  .desc {
+    font-size: 14px;
+  }
+  
+  .star {
+    color: gold;
+  }
+  
+  .username {
+    font-size: 14px;
+  }
+  
+  .date {
+    font-size: 12px;
+  }
+  
+  form {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(88, 87, 87);
+  }
+  
+  .addMarker input {
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .addMarker input::placeholder,
+  .addMarker textarea::placeholder {
+    font-size: 12px;
+    color: rgb(185, 184, 184);
+  }
+  
+  .addMarker input:focus,
+  .addMarker textarea:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  .addMarker textarea {
+    border: none;
+    margin-top: 5px;
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
+  }
+  
+  .submitButton {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+  }
+  
+  .buttons,
+  .logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .button {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .button:focus{
+    outline: none;
+  }
+  
+  .logout{
+    background-color: tomato;
+  }
+  
+  .login{
+    background-color: teal;
+    margin-right: 10px;
+  }
+  
+  .register{
+    background-color: slateblue;
+  }
